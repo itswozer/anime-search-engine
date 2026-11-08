@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b12">
+  <meta name="description" content="Search the anime collection instantly.">
+  <title>Yoru — Discover anime</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Yoru home">
+        <span class="brand-mark" aria-hidden="true">夜</span>
+        <span>yoru<span class="brand-period">.</span></span>
+      </a>
+      <span class="header-note"><span class="live-dot" aria-hidden="true"></span> Anime collection</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">FIND YOUR NEXT FAVORITE</p>
+        <h1 id="page-title">Dive into the<br><span>world of anime.</span></h1>
+        <p class="hero-copy">Search for the story on your mind. Watch the collection take shape as you type.</p>
+
+        <div class="search-wrap">
+          <label class="sr-only" for="anime-search">Search anime</label>
+          <svg class="search-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none">
+            <circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8"></circle>
+            <path d="m16 16 4.2 4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+          </svg>
+          <input
+            id="anime-search"
+            type="search"
+            placeholder="Search anime titles..."
+            autocomplete="off"
+            spellcheck="false"
+            aria-describedby="search-hint"
+          >
+          <span class="search-shortcut" aria-hidden="true">⌕</span>
+          <p class="sr-only" id="search-hint">Results update as you type using the Jikan API.</p>
+        </div>
+        <div class="search-meta">
+          <p id="result-count" class="result-count" aria-live="polite"></p>
+          <span class="instant-label"><span aria-hidden="true">✦</span> Instant search</span>
+        </div>
+      </section>
+
+      <section class="catalog" aria-labelledby="catalog-title">
+        <div class="catalog-heading">
+          <div>
+            <p class="eyebrow">OUR COLLECTION</p>
+            <h2 id="catalog-title">Explore</h2>
+          </div>
+          <span class="catalog-note">Live results from Jikan API</span>
+        </div>
+        <div id="anime-list" class="anime-grid" aria-live="polite"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <span class="empty-icon" aria-hidden="true">⌕</span>
+          <span class="loading-spinner" aria-hidden="true" hidden></span>
+          <h3>Search for an anime to get started</h3>
+          <p>Results will appear here as you search.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>yoru<span class="brand-period">.</span> — Where stories come alive</span>
+      <span>Made for anime fans <span aria-hidden="true">♥</span></span>
+    </footer>
+  </div>
+</body>
+</html>
